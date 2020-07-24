@@ -722,8 +722,6 @@ Kalender des Benutzers1 eingetragener Termin angezeigt wird.
 
 Kurzer Blick in die Kontakte
 
-<img width="250" src="./images/image6.png" />
-<img width="250" src="./images/image6.png" />
 <img width="250" src="./images/image5.png" />
 
 In Thunderbird
