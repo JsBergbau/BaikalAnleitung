@@ -899,6 +899,5 @@ Dieser Text steht unter der Creative Commons BY-SA 4.0 Lizenz
 Bei Weiterverbreitungen bitte den Link zu Github
 [https://github.com/JsBergbau/BaikalAnleitung](https://github.com/JsBergbau/BaikalAnleitung)
 auf dieses Dokument als Quelle angeben. Bei Änderungen/Ergänzungen bitte
-eine Mail an
-[jsbergbau@gmail.com](mailto:jsbergbau@gmail.com) damit
+einen Pull Request oder Issue schreiben, damit
 diese in diesen Text eingepflegt werden können.
