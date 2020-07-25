@@ -102,7 +102,7 @@ flashen es via Etcher auf eine SD-Karte.
 
 ### Raspberry PI vorbereiten
 
-<img width="250" src="./images/image30.png" />
+<img width="700" src="./images/image30.png" />
 
 Wer hier weitere Unterstützung braucht, kann z.B. nach dieser Anleitung
 [https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/](https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/)
@@ -122,7 +122,7 @@ Eine Anleitung hierfür findet sich unter
 Auch wenn dort von Raspbian Stretch (=Vorgängerversion) die Rede ist,
 funktioniert der dort beschriebene Weg genauso.
 
-<img width="250" src="./images/image32.png" />
+<img width="700" src="./images/image32.png" />
 
 Anschließend starten wir den Raspberry-PI. Via SSH können wir uns nun
 verbinden. Wer hierbei Unterstützung braucht, findet sie hier
@@ -262,7 +262,7 @@ Baikal 0.7.0 läuft jetzt und wir können zugreifen via `http://<IP>:9999`
 
 ### Baikal Ersteinrichtung
 
-<img width="250" src="./images/image33.png" />
+<img width="700" src="./images/image33.png" />
 
 In diesem Beispiel verwende ich ein 25-stelliges zufälliges Passwort:
 
@@ -291,7 +291,7 @@ mehr als sicher.
 Im nächsten Fenster belassen wir diese Einstellung so und klicken nur
 auf Save Changes:
 
-<img width="250" src="./images/image34.png" />
+<img width="700" src="./images/image34.png" />
 
 ### Benutzereinrichtung
 
@@ -300,14 +300,14 @@ Jetzt können wir auf „Start using Baikal" klicken oder wir rufen wieder
 
 und klicken oben auf Login:
 
-<img width="250" src="./images/image22.png" />
+<img width="700" src="./images/image22.png" />
 
 Jetzt loggen wir uns mit dem Benutzer admin und unserem vorher
 eingegebenen Passwort ein:
 
 Jetzt sehen wir die Administrationsoberfläche
 
-<img width="250" src="./images/image27.png" />
+<img width="700" src="./images/image27.png" />
 
 Hier nicht verwirren lassen. Da wir Baikal selbst aus dem Quellcode
 erzeugt haben, findet er eine "neue Version", die aber älter ist.
@@ -315,9 +315,9 @@ erzeugt haben, findet er eine "neue Version", die aber älter ist.
 Wir klicken nun oben in der Leiste auf Users and resources und
 anschließend rechts auf `+Add user`
 
-<img width="250" src="./images/image41.png" />
+<img width="700" src="./images/image41.png" />
 
-<img width="250" src="./images/image46.png" />
+<img width="700" src="./images/image46.png" />
 
 Bei der E-Mail-Adresse ist es nicht so
 wichtig, was eingegeben wird. Sie ist zwar ein Pflichtfeld, aber da wir
@@ -326,18 +326,18 @@ nicht direkt verwendet. Sie wird erst wieder beim Freigeben des
 Kalenders wichtig. Hier im Beispiel legen wir einen Benutzer1 und einen
 Benutzer2 an.
 
-<img width="250" src="./images/image38.png" />
+<img width="700" src="./images/image38.png" />
 
 Über die Edit Schaltfläche können wir das Passwort ändern. Über Address
 Books können weitere Adressbücher hinzugefügt werden. Für
 Demonstrationszwecke ändern wir die Namen wie folgt:
 
-<img width="250" src="./images/image52.png" />
+<img width="700" src="./images/image52.png" />
 
 Analog gehen wir für den Kalender vor und machen diese Einstellung für
 Benutzer2
 
-<img width="250" src="./images/image42.png" />
+<img width="700" src="./images/image42.png" />
 
 ## Baikal-Update
 
@@ -394,7 +394,7 @@ sudo systemctl start nginx.service
 Beim Zugriff auf unseren Baikal-Server werden wir jetzt von einer
 Upgrade-Meldung begrüßt `http://<IP>:9999/admin`
 
-<img width="250" src="./images/image50.png" />
+<img width="700" src="./images/image50.png" />
 
 Hier klicken wir einfach auf `Start Upgrade`. Ein Backup haben wir ja
 bereits zu Beginn erstellt.
@@ -402,7 +402,7 @@ bereits zu Beginn erstellt.
 Hier kam nach weniger als einer Sekunde die Meldung, dass alles gut
 verlaufen ist.
 
-<img width="250" src="./images/image47.png" />
+<img width="700" src="./images/image47.png" />
 
 Nachdem man verifiziert hat, dass die Synchronisation noch läuft und die
 Einträge weiterhin vorhanden sind, kann aufgeräumt werden
@@ -419,20 +419,20 @@ Jetzt loggen wir uns als Benutzer über die URL ein
 `http://<IP>:9999/dav.php` ein. Wichtig, über die andere
 Oberfläche können wir uns nicht als Benutzer 1 einloggen!
 
-<img width="250" src="./images/image43.png" />
+<img width="700" src="./images/image43.png" />
 
 Dort klicken wir nun auf calendars
 
-<img width="250" src="./images/image49.png" />
+<img width="700" src="./images/image49.png" />
 
 Wir klicken auf Benutzer1
 
-<img width="250" src="./images/image45.png" />
+<img width="700" src="./images/image45.png" />
 
 Da wir in Thunderbird/Lightning die volle URL eingeben müssen, können
 wir uns das Leben etwas erleichtern. Über den via Pfeil markierten Link
 kann man den kompletten Kalender als `.ics` Datei herunterladen. Wir
-können aber auch den Link kopieren und den Rest mit `export` entfernen,
+können aber auch den Link kopieren und den Rest mit `?export` entfernen,
 sodass es dann so `http://<IP>:9999/dav.php/calendars/Benutzer1/default/`
 aussieht. Diesen Link brauchen wir weiter unten.
 
@@ -442,7 +442,7 @@ Bevor wir die Benutzeroberfläche verlassen, geben wir noch unseren
 Kalender für Benutzer2 frei. Wir klicken nun auf default und scrollen im
 nächsten Fenster ganz nach unten
 
-<img width="250" src="./images/image44.png" />
+<img width="700" src="./images/image44.png" />
 
 Hier geben wir nun die E-Mail-Adresse des Benutzers im Format
 `mailto:<E-Mail-Adresse>` ein mit dem wir den Kalender teilen wollen.
@@ -454,28 +454,28 @@ gehen wir analog vor, wählen aber Revoke access und klicken dann
 verwirrenderweise erneut auf
 Share.
 
-<img width="250" src="./images/image48.png" />
+<img width="700" src="./images/image48.png" />
 
 Auf dieser Seite sehen wir auch mit wem wir den Kalender geteilt haben.
 
 Ohne Freigabe für einen anderen Benutzer:
 
-<img width="250" src="./images/image51.png" />
+<img width="700" src="./images/image51.png" />
 
 Mit Freigabe:
 
-<img width="250" src="./images/image53.png" />
+<img width="700" src="./images/image53.png" />
 
 Achtet darauf, dass dort steht `<cs: invite-accepted>`. Wenn es nicht
 geklappt hat, steht dort `<cs:invite-invalid>`
 
-<img width="250" src="./images/image35.png" />
+<img width="200" src="./images/image35.png" />
 
 Um zu sehen, ob es geklappt hat, loggen wir uns als Benutzer2 ein. Unter
 calendars 🡪 Benutzer2 taucht nun ein weiterer Kalender mit einer
 komischen Nummer auf.
 
-<img width="250" src="./images/image31.png" />
+<img width="700" src="./images/image31.png" />
 
 Auch hier können wir rechts nun den Link kopieren um diesen Kalender im
 Thunderbird hinzufügen.
@@ -503,12 +503,12 @@ Umschalt + C
 Unter Kalender gehen wir per Rechtsklick auf Neuer Kalender, hier wählen
 wir Im Netzwerk
 
-<img width="250" src="./images/image24.png" />
+<img width="700" src="./images/image24.png" />
 
 Im nächsten Schritt wählen wir CalDAV und geben die URL, die wir oben
 kopiert haben ohne das `export` am Ende ein.
 
-<img width="250" src="./images/image26.png" />
+<img width="700" src="./images/image26.png" />
 
 Im nächsten Schritt geben wir ihm noch einen Namen und eine Farbe. Die
 Farbe, die wir in Baikal gesetzt haben, wird von Thunderbird leider
@@ -517,38 +517,38 @@ nicht übernommen.
 Im nächsten Schritt geben wir nun die Benutzerdaten von Benutzer1 ein.
 Wir erstellen einen Termin.
 
-<img width="250" src="./images/image28.png" />
+<img width="700" src="./images/image28.png" />
 
 In der Baikal-Benutzeroberfläche unter
 `http://<IP>:9999/dav.php` 🡪 calendars 🡪 Benutzer1
 🡪 default taucht dann für jeden Kalendereintrag eine Zeile in der
 Übersicht auf. Klickt man darauf, sieht man sogar den genauen Eintrag:
 
-<img width="250" src="./images/image29.png" />
+<img width="700" src="./images/image29.png" />
 
-<img width="250" src="./images/image21.png" />
+<img width="700" src="./images/image21.png" />
 
 #### Kontakte in Thunderbird verwalten
 
 Hierfür wird das CardBook Addon benötigt
 
-<img width="250" src="./images/image25.png" />
+<img width="700" src="./images/image25.png" />
 
 Nach Installation und Neustart Thunderbirds, werden wir mit einem
 Fenster des Addons begrüßt:
 
-<img width="250" src="./images/image20.png" />
+<img width="700" src="./images/image20.png" />
 
 Da wir nur die Baikal Kontakte damit verwalten wollen, können wir auf
 abbrechen klicken. Stattdessen gehen wir im Menü auf Extras 🡪
 CardBook oder drücken Alternativ die Tastenkombination STRG + UMSCHALT +
 B. Links in der Leiste klicken wir rechts und wählen Neues Adressbuch
 
-<img width="250" src="./images/image23.png" />
+<img width="700" src="./images/image23.png" />
 
 Im nächsten Fenster wird Im Netzwerk gewählt
 
-<img width="250" src="./images/image1.png" />
+<img width="700" src="./images/image1.png" />
 
 Im nächsten Fenster wird CardDAV gewählt, die Adresse unseres
 Baikal-Servers im Format `http://<IP>:9999` und die
@@ -557,34 +557,34 @@ können, werden die Zugangsdaten per Klick auf Überprüfen geprüft. Es
 dauert einen Moment und dann können wir im nächsten Fenster die Farbe
 wählen und einen Namen vergeben.
 
-<img width="250" src="./images/image16.png" />
+<img width="700" src="./images/image16.png" />
 
 Wenn wir zuvor den Namen für das Adressbuch des Benutzers 2 geändert
 haben, wird hier automatisch dieser Name übernommen.
 
-<img width="250" src="./images/image14.png" />
+<img width="700" src="./images/image14.png" />
 
-<img width="250" src="./images/image17.png" />
+<img width="700" src="./images/image17.png" />
 
 Jetzt taucht unser eingerichtetes Adressbuch auf. Im Beispiel wurde
 schon der Max Mustermann Kontakt eingerichtet, welcher dann bei der
 Einrichtung von DAVx^5 auftaucht.
 
-<img width="250" src="./images/image8.png" />
+<img width="700" src="./images/image8.png" />
 
 Es ist sehr komfortabel hier Kontakte zu bearbeiten und auszusortieren.
 Damit man nicht mehrmals manuell synchronisieren muss, klicken wir in
 der Leiste über Max Mustermann auf Einstellungen. Unter Synchronisation
 stellen wir dann die Höchstzahl auf 1000 ein.
 
-<img width="250" src="./images/image11.png" />
+<img width="700" src="./images/image11.png" />
 
 Das bedeutet, dass er 1000 Kontakte am Stück synchronisiert. Für den
 unwahrscheinlichen Fall, dass ihr mehr als 1000 Kontakte gleichzeitig
 geändert habe, müsst ihr einfach nochmal auf „Adressbuch
 synchronisieren" drücken.
 
-<img width="250" src="./images/image10.png" />
+<img width="700" src="./images/image10.png" />
 
 ### Apple
 
@@ -623,7 +623,7 @@ man kann die App direkt herunterladen.
 Nehmt dabei bitte die Version bei der „vorgeschlagen" steht. Zum
 Zeitpunkt des Schreibens sieht es so aus:
 
-<img width="250" src="./images/image12.png" />
+<img width="700" src="./images/image12.png" />
 
 Eventuell müsst ihr auf eurem Handy erlauben, dass Apps von
 Drittanbietern installiert werden. Android öffnet dann automatisch die
@@ -648,7 +648,7 @@ auch Aufgaben zu synchronisieren.
 
 Eure Daten werden wie im folgenden Bild gezeigt eingetragen:
 
-<img width="250" src="./images/image19.png" />
+<img width="700" src="./images/image19.png" />
 
 Nach einem Fingertipp auf Anmelden rechts unten, seht ihr folgendes
 Fenster, wenn eure Zugangsdaten passen. Solltet ihr z.B. einen Fehler
@@ -657,7 +657,7 @@ Fehlermeldung, „Es konnte weder ein CalDAV- noch ein CardDAV-Dienst
 gefunden werden". Prüft nochmal genau euer Passwort und gegebenenfalls
 die URL und dann klappt das auch.
 
-<img width="250" src="./images/image18.png" />
+<img width="700" src="./images/image18.png" />
 
 Wenn ihr eure Kontakte in Gruppen sortieren wollt, wählt hier bitte
 unbedingt „Gruppen sind Kategorien der Kontakte". Diese Option kann aber
@@ -666,19 +666,19 @@ kann beliebig angepasst werden.
 
 Im nächsten Fenster tippen wir dann auf unseren Kontonamen
 
-<img width="250" src="./images/image7.png" />
+<img width="700" src="./images/image7.png" />
 
 Und schon sehen wir unser Adressbuch für Benutzer 2. Durch Anhaken der
 Checkbox und Drücken der Synchronisationspfeile werden die Kontakte
 synchronisiert:
 
-<img width="250" src="./images/image9.png" />
+<img width="700" src="./images/image9.png" />
 
-<img width="250" src="./images/image2.png" />
+<img width="200" src="./images/image2.png" />
 
 Nun zu den Kalendern:
 
-<img width="250" src="./images/image15.png" />
+<img width="700" src="./images/image15.png" />
 
 Wie wir sehen beachtet DAVx^5 im Gegensatz zu Thunderbird die Farben.
 Wir sehen den Kalender aus unserem Konto in Gelb und den freigegebenen
@@ -691,7 +691,7 @@ Kontakten.
 
 Schauen wir uns noch kurz die Einstellungen von DAVx^5 an:
 
-<img width="250" src="./images/image3.png" />
+<img width="700" src="./images/image3.png" />
 
 Hier kann man nach eigenen Vorliegen konfigurieren. Da wir in diesem
 Beispiel den Baikal Server nur im lokalen Netzwerk zur Verfügung
@@ -718,26 +718,26 @@ anfangen, da er nicht auf euren Baikalserver zugreifen kann.
 Ein kurzer Blick auf die Termine zeigt, dass unser in Thunderbird im
 Kalender des Benutzers1 eingetragener Termin angezeigt wird.
 
-<img width="250" src="./images/image4.png" />
+<img width="700" src="./images/image4.png" />
 
 Kurzer Blick in die Kontakte
 
-<img width="250" src="./images/image5.png" />
+<img width="700" src="./images/image5.png" />
 
 In Thunderbird
 
-<img width="250" src="./images/image13.png" />
+<img width="700" src="./images/image13.png" />
 
 Es fällt auf, dass Android, zumindest Samsung, den Anzeigenamen nicht
 beachtet, da er beides mal nur Max Mustermann heißt. Erst wenn wir den
 Kontakt antippen, sehen wir den Anzeigenamen:
 
-<img width="250" src="./images/image39.png" />
+<img width="700" src="./images/image39.png" />
 
 Wenn wir den Namen per Tipp auf den kleinen Pfeil aufklappen,
 verschwindet wieder unser Anzeigename.
 
-<img width="250" src="./images/image40.png" />
+<img width="700" src="./images/image40.png" />
 
 Also mit dem Anzeigenamen lieber sparsam umgehen.
 
@@ -817,12 +817,12 @@ Mit einem SQLite Editor wie „DB Browser for SQLite" kann man bei der
 Tabelle „addressbookchanges" und auch „calendarchanges" gelegentlich
 aufräumen, also alle Einträge löschen.
 
-<img width="250" src="./images/image37.png" />
+<img width="700" src="./images/image37.png" />
 
 Und anschließend dein Speicherplatz auch wirklich mittels VACUUM Befehl
 freigeben
 
-<img width="250" src="./images/image36.png" />
+<img width="700" src="./images/image36.png" />
 
 Ein Stoppen von Baikal ist hierbei unerlässlich
 
