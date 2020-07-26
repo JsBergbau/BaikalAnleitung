@@ -25,7 +25,7 @@
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
 - [Backup](#backup)
-- [Datenbankkosmetik](#datenbankkosmetik)
+- [Datenbankkosmetik (nur für Experten)](#datenbankkosmetik-(nur-für-experten))
 - [Weboberfläche](#weboberfläche)
 - [Stromsparen beim Raspberry-PI](#stromsparen-beim-raspberry-pi)
   - [Abschalten des HDMI-Ausgangs](#abschalten-des-hdmi-ausgangs)
@@ -151,15 +151,14 @@ sudo apt-get install nginx php-fpm php-sqlite3 composer php-xml php-curl -y
 
 ### Baikal Installation
 
-Die aktuelle Release-Version von Baikal ist 0.6.1. Diese unterstützt
-soweit ich weiß leider keine Kalenderfreigaben. Deswegen erstellen wir
+Die aktuelle Release-Version von Baikal ist 0.7.1. Um immer auf dem aktuellsten Stand zu sein erstellen wir
 hier die aktuellste Version direkt aus dem Quellcode. Teilweise findet
 man Artikel die einem nahelegen, dass man noch an der PHP-Sicherheit
 etwas einstellen müsste. Dies ist heutzutage nicht mehr notwendig, siehe
 [https://serverfault.com/questions/627903/is-the-php-option-cgi-fix-pathinfo-really-dangerous-with-nginx-php-fpm](https://serverfault.com/questions/627903/is-the-php-option-cgi-fix-pathinfo-really-dangerous-with-nginx-php-fpm)
 
 **Update 07.07.2020**. Mittlerweile ist Baikal 0.7.1 als Release-Version
-verfügbar. Wir können auch weiterhin über diesen Weg stets die
+verfügbar. Wir können auch weiterhin über den in diesem Abschnitt beschriebenen Weg stets die
 aktuellste Version installieren.
 
 ```sh
@@ -287,6 +286,8 @@ ausprobiert wurden. Statistisch findet man es in der Hälfte der Zeit.
 Aber darum mache ich mir keine Sorgen ☺ Bitte benutzt auf keinen Fall
 dieses Passwort. Dadurch, dass es jetzt irgendwo steht, gilt es nicht
 mehr als sicher.
+
+Bei einem derart langen Passwort kommt noch ein anderer Effekt zum Tragen. Dieser nennt sich Hashkollision. D.h. man findet ein funktionierendes Passwort, welches zum selben Hashwert führt, aber nicht euer Originalpasswort ist. Nachdem MD5 jede beliebige Eingabe zu einem festen 128 Bit Wert transformiert, kommt es bei zu langen Passwörtern definitiv zu einer Kollision, sodass ab einer gewissen Passwortlänge kein Sicherheitsgewinn mehr zu erwarten ist. Bei dem hier gewählten Zeichensatz ist das eine Passwortlänge von 22 Zeichen. Das ergibt 3,85e+39 Möglichkeiten verglichen mit 2<sup>128</sup> = 3,4e38 Möglichkeiten. Aber selbst das ergibt in diesem Fall mit der extrem hoch angenommenen Hashleistung immer noch über 539 Millionen Jahre bis alle Möglichkeiten durchprobiert wurden. Da MD5 eine nicht lineare Hashfunktion ist, kann man nicht voraussagen, ob es überhaupt eine Kollision zu einem Passwort gibt oder es gleich sehr viele Kollisionen gibt. Mit einer Passwortlänge von 22 Zeichen und dem oben beschriebenen Zeichensatz ist dennoch ein sehr hohes Sicherheitsniveau gegeben. Quelle https://www.malwaretech.com/2014/05/the-reason-for-maximum-password-lengths.html
 
 Im nächsten Fenster belassen wir diese Einstellung so und klicken nur
 auf Save Changes:
@@ -418,6 +419,8 @@ Das Update ist damit vollständig abgeschlossen.
 Jetzt loggen wir uns als Benutzer über die URL ein
 `http://<IP>:9999/dav.php` ein. Wichtig, über die andere
 Oberfläche können wir uns nicht als Benutzer 1 einloggen!
+
+Einlogen muss man sich nur, wenn man Kalender mit anderen Benutzern teilen möchte. Ansonsten hat man zwei Vorteile durch den Login: Man kann alle Kalendereinträge herunterladen und man kann die Kalender-URL für Thunderbird kopieren, siehe unten.
 
 <img width="700" src="./images/image43.png" />
 
@@ -702,7 +705,11 @@ Hierfür muss man die Standortberechtigung erteilen. Keine Sorge, Baikal
 überwacht euch nicht. Es ist einfach eine Sicherheitsmaßnahme, weil über
 diese Option DAVx<sup>5</sup> Detailinformationen über das WLAN erhält und damit
 theoretisch mit Hilfe eines Webdienstes einen ungefähren Standort
-bestimmen könnte. Auch wenn ihr mal 2 Wochen oder länger im Urlaub seid,
+bestimmen könnte. 
+
+Sollten die beiden Optionen ausgegraut sein, dann habt ihr Datensparen in Android aktiviert. In diesem Fall wird immer nur synchronisiert, wenn man im WLAN ist. Leider kann dann die Begrenzung auf das eigene WLAN nicht vornehmen. Daher kurz Datensparen deaktivieren, Einstellung vornehmen, und wieder aktivieren.
+
+Auch wenn ihr mal 2 Wochen oder länger im Urlaub seid,
 kein Problem. Wenn ihr dann wieder in eurem WLAN seid, holt Baikal die
 Synchronisation nach. Nur in eurem WLAN zu synchronisieren erhöht bei
 unverschlüsselten Verbindungen etwas die Sicherheit, denn theoretisch
@@ -810,12 +817,12 @@ Anschließend natürlich wieder starten
 sudo systemctl start nginx.service
 ```
 
-## Datenbankkosmetik
+## Datenbankkosmetik (nur für Experten)
 
 Unter `/home/pi/Baikal/Specific/db/db.sqlite` findet ihr die Datenbank.
 Mit einem SQLite Editor wie „DB Browser for SQLite" kann man bei der
 Tabelle „addressbookchanges" und auch „calendarchanges" gelegentlich
-aufräumen, also alle Einträge löschen.
+aufräumen, also alle Einträge löschen. Warnung: Bevor man das tut, müssen alle Programme/Clients, die auf Baikal zugreifen synchronisiert sein. Deswegen diese Schritte bitte nur durchführen, wenn man auch weiß, was man tut.
 
 <img width="700" src="./images/image37.png" />
 
