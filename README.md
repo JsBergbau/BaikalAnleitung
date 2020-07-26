@@ -34,7 +34,7 @@
 
 ## Einleitung
 
-In dieser Anleitung geht es darum mit Baikal einen eigenen Kalender- und
+In diesem Tutorial geht es darum mit Baikal einen eigenen Kalender- und
 Kontakte-Server aufzusetzen. Hierfür hat sich für Kalender der CalDAV
 Standard etabliert, während es für Kontakte der CardDAV Standard ist. In
 dieser Anleitung wird, je nach Gebiet, mehr oder weniger ausführlich
