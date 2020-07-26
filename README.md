@@ -86,7 +86,7 @@ Raspberry PI Zero W ist im Betrieb vollkommen ausreichend. Solltet ihr
 einen leistungsfähigeren Raspberry PI zur Verfügung haben, könnt ihr die
 Baikal-Einrichtung auch auf diesem ausführen und dann die SD-Karte in
 den endgültigen Rasbperry-PI Zero W umstecken. Richtet in diesem Fall
-die Konten in Thunderbird und DAVx^5 bitte erst danach ein, weil sich
+die Konten in Thunderbird und DAVx<sup>5</sup> bitte erst danach ein, weil sich
 wahrscheinlich die IP-Adresse eures Raspberry PIs ändert. Gegebenenfalls
 solltet ihr in eurem Router einrichten, dass er immer dieselbe
 IP-Adresse bekommt, sonst ist er eventuell nicht mehr unter der
@@ -312,8 +312,8 @@ Jetzt sehen wir die Administrationsoberfläche
 Hier nicht verwirren lassen. Da wir Baikal selbst aus dem Quellcode
 erzeugt haben, findet er eine "neue Version", die aber älter ist.
 
-Wir klicken nun oben in der Leiste auf Users and resources und
-anschließend rechts auf `+Add user`
+Zum Hinzufügen eines Benutzers klicken wir nun oben in der Leiste auf Users and resources und
+anschließend rechts auf `+Add user`.
 
 <img width="700" src="./images/image41.png" />
 
@@ -568,7 +568,7 @@ haben, wird hier automatisch dieser Name übernommen.
 
 Jetzt taucht unser eingerichtetes Adressbuch auf. Im Beispiel wurde
 schon der Max Mustermann Kontakt eingerichtet, welcher dann bei der
-Einrichtung von DAVx^5 auftaucht.
+Einrichtung von DAVx<sup>5</sup> auftaucht.
 
 <img width="700" src="./images/image8.png" />
 
@@ -598,7 +598,7 @@ und euer Passwort.
 
 Android bringt von Haus aus im Gegensatz zu Apple leider keine
 Unterstützung für CalDAV und CardDAV, deswegen brauchen wir hier eine
-App. Als sehr geeignet hat sich DAVx^5 erwiesen. Im Google Playstore
+App. Als sehr geeignet hat sich DAVx<sup>5</sup> erwiesen. Im Google Playstore
 kostet diese App 3,99€. Wer die Entwickler unterstützten möchte, kann
 dort kaufen
 [https://play.google.com/store/apps/details?id=at.bitfire.davdroid&hl=de](https://play.google.com/store/apps/details?id=at.bitfire.davdroid&hl=de)
@@ -611,12 +611,12 @@ handelt sich zwar um ein österreichisches Konto, aber Dank IBAN geht die
 muss diese Überweisung genauso kostenlos sein wie eine inländische
 Überweisung.
 
-DAVx^5 ist glücklicherweise OpenSource Software
+DAVx<sup>5</sup> ist glücklicherweise OpenSource Software
 [https://gitlab.com/bitfireAT/davx5-ose](https://gitlab.com/bitfireAT/davx5-ose)
 Diese Tatsache kommt uns sehr gelegen, aber keine Sorge, ihr müsst die
 Software nicht selbst kompilieren. Im alternativen Appstore „F-Droid"
 [https://de.wikipedia.org/wiki/F-Droid](https://de.wikipedia.org/wiki/F-Droid)
-, in dem nur freie Software angeboten wird, gibt es DAVx^5 kostenlos.
+, in dem nur freie Software angeboten wird, gibt es DAVx<sup>5</sup> kostenlos.
 Ihr braucht dafür noch nicht einmal die F-Droid Store App installieren,
 man kann die App direkt herunterladen.
 [https://f-droid.org/de/packages/at.bitfire.davdroid/](https://f-droid.org/de/packages/at.bitfire.davdroid/)
@@ -629,7 +629,7 @@ Eventuell müsst ihr auf eurem Handy erlauben, dass Apps von
 Drittanbietern installiert werden. Android öffnet dann automatisch die
 entsprechenden Dialoge. Der Unterschied bei Verwendung der F-Droid App
 sind die automatischen Updates. Das kann aber auch nach hinten losgehen.
-So war zum Zeitpunkt der Initialeinrichtung von DAVx^5 die aktuellste
+So war zum Zeitpunkt der Initialeinrichtung von DAVx<sup>5</sup> die aktuellste
 Version aufgrund eines Fehlers nicht benutzbar. Mein Tipp: Richtet die
 App einmalig manuell ein und macht nur Updates, wenn ihr unbedingt neue
 Features braucht oder die App aufgrund eines Android Updates nicht mehr
@@ -637,10 +637,10 @@ funktionieren sollte. Da die App nur auf euren lokalen Server zugreift
 ist das Sicherheitsrisiko nur minimal. Richtet ihr auch andere Server
 ein, dann haltet die App bitte immer aktuell.
 
-Im Einrichtungsbildschirm fordert DAVx^5 dann, dazu auf Einstellungen
+Im Einrichtungsbildschirm fordert DAVx<sup>5</sup> dann, dazu auf Einstellungen
 vorzunehmen, dass es auch im Hintergrund laufen darf. Technischer
 Hintergrund ist, dass leider viele Apps den Akku im Hintergrund
-leergesogen haben. Bei DAVx^5 braucht ihr euch dabei aber keine
+leergesogen haben. Bei DAVx<sup>5</sup> braucht ihr euch dabei aber keine
 Gedanken zu machen.
 
 Im nächsten Fenster kann man dann bei Bedarf „OpenTasks" installieren um
@@ -680,7 +680,7 @@ Nun zu den Kalendern:
 
 <img width="700" src="./images/image15.png" />
 
-Wie wir sehen beachtet DAVx^5 im Gegensatz zu Thunderbird die Farben.
+Wie wir sehen beachtet DAVx<sup>5</sup> im Gegensatz zu Thunderbird die Farben.
 Wir sehen den Kalender aus unserem Konto in Gelb und den freigegebenen
 Kalender des Benutzer1 mit den Standardtexten.
 
@@ -689,7 +689,7 @@ möchte: In diesem Fenster einfach bei einer freien Stelle drücken und
 nach unten ziehen um die Aktualisierung anzustoßen. Analog bei den
 Kontakten.
 
-Schauen wir uns noch kurz die Einstellungen von DAVx^5 an:
+Schauen wir uns noch kurz die Einstellungen von DAVx<sup>5</sup> an:
 
 <img width="700" src="./images/image3.png" />
 
@@ -700,7 +700,7 @@ synchronisieren wollen. Wir können sogar die `SSID` / den Namen unseres
 WLANs zu Hause eingeben, dann wird nur über diesen Namen synchronisiert.
 Hierfür muss man die Standortberechtigung erteilen. Keine Sorge, Baikal
 überwacht euch nicht. Es ist einfach eine Sicherheitsmaßnahme, weil über
-diese Option DAVx^5 Detailinformationen über das WLAN erhält und damit
+diese Option DAVx<sup>5</sup> Detailinformationen über das WLAN erhält und damit
 theoretisch mit Hilfe eines Webdienstes einen ungefähren Standort
 bestimmen könnte. Auch wenn ihr mal 2 Wochen oder länger im Urlaub seid,
 kein Problem. Wenn ihr dann wieder in eurem WLAN seid, holt Baikal die
@@ -789,7 +789,7 @@ ssh <benutzername>@<Serveraddresse> -p <SSH-Port> -i private.key -R 0.0.0.0:9999
 
 Aus Sicherheitsgründen solltet ihr nur die Public-Key-Authentifizierung
 auf eurem gemieteten Server erlauben und auch den Port ändern. In
-DAVx^5 stellt ihr dann statt eurer lokalen IP-Adresse die Adresse des
+DAVx<sup>5</sup> stellt ihr dann statt eurer lokalen IP-Adresse die Adresse des
 Servers ein. Hier ist nun ganz wichtig Baikal mit einem SSL-Zertifikat
 zu betreiben, welches auf euren Servernamen lautet um Lauscher draußen
 zu halten.
