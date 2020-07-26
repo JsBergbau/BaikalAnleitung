@@ -245,6 +245,8 @@ Gegebenenfalls bitte den Pfad in root `/home/pi/Baikal/html;` und den Port
 in `listen 9999 default_server;` anpassen
 
 ```sh
+cd /home/pi/DiensteUndProgramme/Baikal #eigentlich sollten wir schon in diesem Verezeichnis sein, nur zur Sicherheit
+
 sudo chown -R www-data:www-data . #Man beachte den Punkt „."
 
 sudo chown root:root baikal-nginx.site # Dient der Sicherheit. Damit der Webserver nicht das eigene Verzeichnis umschreiben kann
