@@ -25,7 +25,7 @@
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
 - [Backup](#backup)
-- [Datenbankkosmetik (nur für Experten)](#datenbankkosmetik-(nur-für-experten))
+- [Datenbankkosmetik (nur für Experten)](#datenbankkosmetik-nur-für-experten)
 - [Weboberfläche](#weboberfläche)
 - [Stromsparen beim Raspberry-PI](#stromsparen-beim-raspberry-pi)
   - [Abschalten des HDMI-Ausgangs](#abschalten-des-hdmi-ausgangs)
