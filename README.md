@@ -162,6 +162,8 @@ verfügbar. Wir können auch weiterhin über den in diesem Abschnitt beschrieben
 aktuellste Version installieren.
 
 ```sh
+cd /home/pi
+mkdir DiensteUndProgramme
 git clone https://github.com/sabre-io/Baikal
 cd Baikal
 composer install
