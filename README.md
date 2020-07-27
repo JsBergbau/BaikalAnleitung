@@ -25,7 +25,7 @@
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
 - [Backup](#backup)
-- [Datenbankkosmetik (nur für Experten)](#datenbankkosmetik-nur-für-experten)
+- [Datenbank verkleinern (nur für Experten)](#datenbank-verkleinern-nur-für-experten)
 - [Weboberfläche](#weboberfläche)
 - [Stromsparen beim Raspberry-PI](#stromsparen-beim-raspberry-pi)
   - [Abschalten des HDMI-Ausgangs](#abschalten-des-hdmi-ausgangs)
@@ -169,8 +169,8 @@ cd Baikal
 composer install
 ```
 
-Hinweis: Wie ich nach dem Schreiben festgestellt habe, läuft ebenfalls
-Influxdb 2.0 auf Standardmäßig auf Port 9999. Wenn ihr mal eine InfluxDB
+Diese Anleitung verwendet Port 9999 für Baikal. Wie ich allerdings nach dem Erstellen der Screenshots festgestellt habe, läuft ebenfalls
+Influxdb 2.0 auf Standardmäßig auf Port 9999. Wenn ihr also mal eine InfluxDB
 auf demselben System aufsetzen wollt (z.B. für Heimautomation), wählt
 bitte einen anderen Port, z.B. 9998 und ersetzt überall, wo ihr hier
 9999 seht durch 9998.
@@ -218,10 +218,11 @@ server {
     rewrite ^/.well-known/carddav /dav.php redirect;
     charset utf-8;
 
-    location ~ /(.ht|Core|Specific) {
+    location ~ /(\.ht|Core|Specific|config) {
         deny all;
         return 404;
-    }
+    } #In der aktuellen Variante nicht benötigt, da "html" das Root Verzeichnis ist, schadet aber auch nicht.
+	 #Sollte man Baikal jedoch direkt im Webserver als Unterverzeichnis installieren, absolut notwendig. Bitte daran denken!
 
     location ~ ^(.+.php)(.*)$ {
         try_files $fastcgi_script_name =404;
@@ -328,7 +329,9 @@ Bei der E-Mail-Adresse ist es nicht so
 wichtig, was eingegeben wird. Sie ist zwar ein Pflichtfeld, aber da wir
 am Anfang des Setups die E-Mail-Adresse leer gelassen haben, wird sie
 nicht direkt verwendet. Sie wird erst wieder beim Freigeben des
-Kalenders wichtig. Hier im Beispiel legen wir einen Benutzer1 und einen
+Kalenders wichtig. Hat man jedoch eine "Email invite sender address" angegeben, bitte unbedingt eine korrekte E-Mail-Adresse angeben.
+
+Hier im Beispiel legen wir einen Benutzer1 und einen
 Benutzer2 an.
 
 <img width="700" src="./images/image38.png" />
@@ -821,29 +824,30 @@ Anschließend natürlich wieder starten
 sudo systemctl start nginx.service
 ```
 
-## Datenbankkosmetik (nur für Experten)
+## Datenbank verkleinern (nur für Experten)
 
-Unter `/home/pi/Baikal/Specific/db/db.sqlite` findet ihr die Datenbank.
-Mit einem SQLite Editor wie „DB Browser for SQLite" kann man bei der
-Tabelle „addressbookchanges" und auch „calendarchanges" gelegentlich
-aufräumen, also alle Einträge löschen. Warnung: Bevor man das tut, müssen alle Programme/Clients, die auf Baikal zugreifen synchronisiert sein. Deswegen diese Schritte bitte nur durchführen, wenn man auch weiß, was man tut.
+Unter `/home/pi/Baikal/Specific/db/db.sqlite` findet ihr die Datenbank. Mit einem SQLite Editor wie z.B. „DB Browser for SQLite" kann man darauf zugreifen. 
+Werden Einträge in der Datenbank gelöscht (z.B. ein Kontakt oder ein Kalendereintrag) "löscht" SQLite diesen nur logisch ohne den Speicherplatz tatsächlich freizugeben. Er wird lediglich bei neuen Einträgen dann wieder benutzt, was zu einer internen Fragmentierung führt. Daher ist es empfehlenswert von Zeit zu Zeit den VACUUM Befehl abzusetzen, siehe https://www.sqlitetutorial.net/sqlite-vacuum/
+ 
+**Warnung:** Dieser Absatz ist nur für die, die genau wissen was sie tun. Im Zweifel hier lieber die Finger davon lassen! 
+Zusätzlich kann sich die Jahre kann sich in den Tabellen „addressbookchanges" und auch „calendarchanges" einige nicht mehr benötigte Daten ansammeln. Diese Tabellen dienen dazu die korrekte Synchronisation zwischen allen Geräten sicherzustellen. Bevor man also hier löscht, müssen alle Programme/Clients, die auf Baikal zugreifen synchronisiert sein! Im Zweifel die Daten lieber belassen.
 
-<img width="700" src="./images/image37.png" />
+Für Wartungsarbeiten ist ein Stoppen von Baikal unerlässlich
 
-Und anschließend dein Speicherplatz auch wirklich mittels VACUUM Befehl
-freigeben
-
-<img width="700" src="./images/image36.png" />
-
-Ein Stoppen von Baikal ist hierbei unerlässlich
-
-```sh
+```
 sudo systemctl stop nginx.service
 ```
 
+Beispiel für Tabelle "addressbookchanges":
+<img width="700" src="./images/image37.png" />
+
+
+Wartung der Datenbank mittels VACUUM Befehl:
+<img width="700" src="./images/image36.png" />
+
 Anschließend natürlich wieder starten
 
-```sh
+```
 sudo systemctl start nginx.service
 ```
 
