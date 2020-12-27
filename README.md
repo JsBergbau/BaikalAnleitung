@@ -727,6 +727,47 @@ diesem Hash ein Passwort machen kann, siehe Abschnitt Baikal
 Ersteinrichtung. Aber selbst mit dem Passwort kann der Angreifer nichts
 anfangen, da er nicht auf euren Baikalserver zugreifen kann.
 
+#### Übertragen der Kontakte vom vorherigen Speicherort zu DAVx<sup>5</sup> 
+
+In den meisten Fällen werdet ihr die Kontakte schon an einem anderen Speicherort gespeichert haben. In diesem Abschnitt geht es darum die Kontakte nach DAVx<sup>5</sup> zu übertragen.
+
+Auch wenn dieses Tutorial die Absicht hat Kontakte ohne Google zu verwalten, verwenden wir hierfür die Google Kontakte App. Dieses ist am leichtesten im Playstore zu finden und bietet die Möglichkeit des einfachen Ex- und Imports der Kontakte, sowie des einfachen Verschiebens zwischen den Konten. Allerdings lässt die Google Kontakte App Stand Dezember 2020 nur ein Verschieben ins Google oder den Gerätespeicher, aber nicht in unsere DAVx<sup>5</sup>-Konten zu.
+
+Die Google-Kontakte App versucht ab und zu einen zu nötigen, dass man seine Kontakte doch ins Google-Konto synchronisieren möchte. Hier einfach standhaft bleiben und ablehnen und natürlich auch nochmal die Nachfrage, ob man das wirklich ablehnen möchte.
+
+Nach dem Verschieben kann die Google-Kontakte App auch wieder gelöscht werden. Ich habe mich bewusst für Google-Kontakte entschieden, da die meisten anderen Kontakte-Apps entweder die benötigte Funktionalität nicht bieten oder so wenige Download-Zahlen haben, dass ich eine große Gefahr sehe, dass diese Apps die Kontakte unbemerkt an den Entwickler nach Hause senden könnten.
+
+Die Installation der App erfolgt z.B. über diesen Link https://play.google.com/store/apps/details?id=com.google.android.contacts oder indem man in der Google Play App "Kontakte" eingibt. Google zeigt automatisch dann nur seine Google-App an. Wettbewerbstechnisch nicht schön, aber hier zumindest hilfreich.
+
+<img width="350" src="./images/playstore_kontakte.jpg" />
+
+In der App geht ihr links oben auf den Menüknopf
+
+<img width="350" src="./images/Kontakte_Menue.jpg" />
+
+Und wählt dann „exportieren“ 
+
+<img width="350" src="./images/Einstellungen_Kontakte_exportieren.jpg" />
+
+Im nächsten Schritt wählt ihr die Kontakte des Kontos, welches exportiert werden soll. In diesem Fall des Google-Kontos. Die Google Kontakte App zeigt hier nur die Optionen an, in denen auch Kontakte gespeichert sind. Habt ihr Kontakte Lokal im Gerät gespeichert, taucht dann auch die Option "Gerät" auf. Aber Kontakte der SIM-Karte werden hier leider nicht angezeigt. Die könnt ihr aber wie unten gleich beschrieben auf dem selben Weg importieren wie die VCF-Datei. Wählt dort dann einfach "SIM-Karte".
+
+<img width="350" src="./images/Konto_exportieren.jpg" />
+
+Nach Druck auf "In VCF-Datei exportieren" erscheint der Speichern Dialog eures Smartphones. Hier wählt ihr einen Ordner in dem ihr die exportieren Kontakte temporär speichern möchtet. Je nach Anzahl der Kontakte dauert das Exportieren ein paar Sekunden bis Minuten. Wenn der Vorgang abgeschlossen ist, seht ihr in der Benachrichtigungsleiste „Export von <euer gewählter Dateiname>.vcf abgeschlossen“
+
+Jetzt geht ihr wieder ins Einstellungs-Menü der Google-Kontakte App wie oben beschrieben und wählt statt „Exportieren“ nun „Importieren“ und im nächsten Schritt "VCF-Datei". 
+
+<img width="350" src="./images/Kontakte_Importieren.jpg" />
+
+Jetzt im nächsten Schritt scheint es, dass euer DAVx<sup>5</sup> doppelt angezeigt wird. Einmal als DAVx<sup>5</sup> und einmal als DAVx<sup>5</sup>-Adressbuch. Bei ersterem Konto handelt es sich um einen Bug in der Google-Kontakte-App. *_Verwendet auf gar keinen Fall dieses Konto_*, denn hier werden die Kontakte nicht synchronisiert. *_Verwendet immer den Eintrag mit DAVx<sup>5</sup>-Adressbuch_*. Siehe auch https://www.davx5.com/faq/contacts/android-11-google-contacts 
+
+Im nächsten Schritt wählt ihr die gerade gespeicherte "contacts.vcf" Datei und das war es auch schon. Jetzt werden die Kontakte importiert.
+
+Leitet sicherheitshalber einen Synchronisationsvorgang in DAVx<sup>5</sup> wie weiter oben beschrieben ein. Es ist normal, dass dieser Synchronisationsvorgang je nach Anzahl der Kontakte ein paar Minuten dauern kann. Die nachfolgenden Synchronisationen sind in wenigen Sekunden abgeschlossen.
+
+Anschließend können die Kontakte im alten Konto gelöscht werden. Die Übertragung nach DAVx<sup>5</sup> ist nun abgeschlossen.
+
+
 ### Erfolgskontrolle
 
 Ein kurzer Blick auf die Termine zeigt, dass unser in Thunderbird im
