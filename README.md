@@ -228,7 +228,8 @@ server {
         try_files $fastcgi_script_name =404;
         include /etc/nginx/fastcgi_params;
         fastcgi_split_path_info ^(.+.php)(.*)$;
-        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.3-fpm.sock; #Hier auf eure installierte PHP-Version achten. 
+	#fastcgi_pass unix:/run/php/php7.4-fpm.sock; #Ubuntu hat z.B. schon php 7.4
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param PATH_INFO $fastcgi_path_info;
     }
@@ -245,7 +246,11 @@ server {
 ```
 
 Gegebenenfalls bitte den Pfad in root `/home/pi/Baikal/html;` und den Port
-in `listen 9999 default_server;` anpassen
+in `listen 9999 default_server;` anpassen. Bei der Zeile `fastcgi_pass unix:/run/php/php7.3-fpm.sock;` bitte durch ausführen von `php --version` überprüfen, ob ihr auch php 7.3.x habt (Stand Januar 2021 ist das beim Raspberry PI der Fall). 
+
+Ubuntu bringt teilweise 7.4.x mit und daher die Zeile mit Version 7.3 auskommentieren, sowie bei der Zeile darunter das Kommentarzeichen `#` entfernen. Habt ihr hier die falsche Version stehen, kann das die Ursache für eine 502 Bad Gateway Fehlermeldung sein.
+
+Zum Schluss noch ein paar kleine Abschlussarbeiten:
 
 ```sh
 cd /home/pi/DiensteUndProgramme/Baikal #eigentlich sollten wir schon in diesem Verezeichnis sein, nur zur Sicherheit
