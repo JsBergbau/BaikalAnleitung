@@ -379,7 +379,7 @@ Hier könnt ihr ein beliebiges Wort eintragen. Diese Datei verhindert, dass euer
 ```
 smtp.gmail.com smtp --user=<euerNutzername> --pass=<Euer Apppasswort> --starttls
 ```
-Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer Apppasswort, welches ihr extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten. Die Werte für zahlreiche Mailanbieter gibt es hier https://wiki.debian.org/nullmailer#Configuration 
+Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer App-Passwort, welches ihr zumindest bei Google extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten. Die Werte für zahlreiche Mailanbieter gibt es hier https://wiki.debian.org/nullmailer#Configuration 
 
 /etc/nullmailer/defaultdomain 
 
