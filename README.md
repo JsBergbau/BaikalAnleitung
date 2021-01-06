@@ -359,7 +359,9 @@ Benutzer2
 
 ### Maildienst Einrichtung (optional, nur für Einladungsmails)
 
-Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. 
+Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. Die Wahl fiel auf nullmailer, da dieses Paket sehr schlank ist, aber gleichzeitig eine Nachrichtenwarteschlange hat. Kann aus irgendeinem Grund die Mail aktuell nicht versendet werden, wird sie später nachgeholt.
+
+
 Konfiguration:
 
 /etc/nullmailer/adminaddr
@@ -377,7 +379,7 @@ Hier könnt ihr ein beliebiges Wort eintragen. Diese Datei verhindert, dass euer
 ```
 smtp.gmail.com smtp --user=<euerNutzername> --pass=<Euer Apppasswort> --starttls
 ```
-Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer Apppasswort, welches ihr extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten.
+Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer Apppasswort, welches ihr extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten. Eine ANleitung für viele Mailanbieter gibt es hier https://wiki.debian.org/nullmailer#Configuration 
 
 /etc/nullmailer/defaultdomain 
 
