@@ -361,6 +361,7 @@ Benutzer2
 
 Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. 
 Konfiguration:
+
 /etc/nullmailer/adminaddr
 ```
 Hier steht eure E-Mail-Adresse auf der Ihr Nachrichten vom System erhalten möchtet
@@ -378,7 +379,9 @@ smtp.gmail.com smtp --user=<euerNutzername> --pass=<Euer Apppasswort> --starttls
 ```
 Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer Apppasswort, welches ihr extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten.
 
-/etc/nullmailer/defaultdomain bleibt leer
+/etc/nullmailer/defaultdomain 
+
+bleibt leer
 
 Das wars auch schon, ab jetzt könnt ihr Mails versenden. Um das auch via Kommandozeile zu testen `"Subject: sendmail test" | sendmail -v eure@zieladresse.domain` 
 Jetzt bekommt ihr eine leere Mail zugeschickt, wenn alles geklappt hat.
