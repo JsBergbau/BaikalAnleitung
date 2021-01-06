@@ -11,7 +11,7 @@
   - [Webserver-Konfiguration](#webserver-konfiguration)
   - [Baikal Ersteinrichtung](#baikal-ersteinrichtung)
   - [Benutzereinrichtung](#benutzereinrichtung)
-  - [Maildienst Einrichtung (optional, nur für Einladungsmails)](#maildienst-einrichtung--optional--nur-f+r-einladungsmails-)
+  - [Maildienst Einrichtung (optional, nur für Einladungsmails)](#maildienst-einrichtung-optional-nur-f%C3%BCr-einladungsmails)
 - [Baikal-Update](#baikal-update)
 - [Benutzerlogin](#benutzerlogin)
 - [Freigabe des Kalenders für andere Benutzer](#freigabe-des-kalenders-für-andere-benutzer)
