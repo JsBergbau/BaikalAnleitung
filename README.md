@@ -164,6 +164,7 @@ aktuellste Version installieren.
 ```sh
 cd /home/pi
 mkdir DiensteUndProgramme
+cd ./DiensteUndProgramme
 git clone https://github.com/sabre-io/Baikal
 cd Baikal
 composer install
@@ -259,7 +260,7 @@ sudo chown -R www-data:www-data . #Man beachte den Punkt „."
 
 sudo chown root:root baikal-nginx.site # Dient der Sicherheit. Damit der Webserver nicht das eigene Verzeichnis umschreiben kann
 
-sudo ln -s /home/pi/Baikal/baikal-nginx.site /etc/nginx/sites-enabled/baikal-nginx.site #Unsere Datei in den Webserver verlinken, sodass die Seite ausgeliefert wird
+sudo ln -s /home/pi/DiensteUndProgramme/Baikal/baikal-nginx.site /etc/nginx/sites-enabled/baikal-nginx.site #Unsere Datei in den Webserver verlinken, sodass die Seite ausgeliefert wird
 
 # Neustarten des Webservers
 
