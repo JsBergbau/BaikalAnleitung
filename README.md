@@ -369,7 +369,7 @@ Konfiguration:
 Hier steht eure E-Mail-Adresse auf der Ihr Nachrichten vom System erhalten möchtet
 ```
 
-/etc/nullmailer/adminaddr
+/etc/nullmailer/idhost
 ```
 nullhost
 ```
