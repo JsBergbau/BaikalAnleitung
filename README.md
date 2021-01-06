@@ -11,6 +11,7 @@
   - [Webserver-Konfiguration](#webserver-konfiguration)
   - [Baikal Ersteinrichtung](#baikal-ersteinrichtung)
   - [Benutzereinrichtung](#benutzereinrichtung)
+  - [Maildienst Einrichtung (optional, nur für Einladungsmails)](#maildienst-einrichtung--optional--nur-f+r-einladungsmails-)
 - [Baikal-Update](#baikal-update)
 - [Benutzerlogin](#benutzerlogin)
 - [Freigabe des Kalenders für andere Benutzer](#freigabe-des-kalenders-für-andere-benutzer)
@@ -21,6 +22,7 @@
     - [Kontakte in Thunderbird verwalten](#kontakte-in-thunderbird-verwalten)
   - [Apple](#apple)
   - [Android](#android)
+    - [Übertragen der Kontakte vom vorherigen Speicherort zu DAVx<sup>5</sup>](#übertragen-der-kontakte-vom-vorherigen-speicherort-zu-davx5)
   - [Erfolgskontrolle](#erfolgskontrolle)
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
@@ -31,6 +33,7 @@
   - [Abschalten des HDMI-Ausgangs](#abschalten-des-hdmi-ausgangs)
   - [LEDs abschalten](#leds-abschalten)
   - [Netzteil](#netzteil)
+ - [Creative Commons Lizenz](#creative-commons-lizenz)
 
 ## Einleitung
 
@@ -300,6 +303,8 @@ mehr als sicher.
 
 Bei einem derart langen Passwort kommt noch ein anderer Effekt zum Tragen. Dieser nennt sich Hashkollision. D.h. man findet ein funktionierendes Passwort, welches zum selben Hashwert führt, aber nicht euer Originalpasswort ist. Nachdem MD5 jede beliebige Eingabe zu einem festen 128 Bit Wert transformiert, kommt es bei zu langen Passwörtern definitiv zu einer Kollision, sodass ab einer gewissen Passwortlänge kein Sicherheitsgewinn mehr zu erwarten ist. Bei dem hier gewählten Zeichensatz ist das eine Passwortlänge von 22 Zeichen. Das ergibt 3,85e+39 Möglichkeiten verglichen mit 2<sup>128</sup> = 3,4e38 Möglichkeiten. Aber selbst das ergibt in diesem Fall mit der extrem hoch angenommenen Hashleistung immer noch über 539 Millionen Jahre bis alle Möglichkeiten durchprobiert wurden. Da MD5 eine nicht lineare Hashfunktion ist, kann man nicht voraussagen, ob es überhaupt eine Kollision zu einem Passwort gibt oder es gleich sehr viele Kollisionen gibt. Mit einer Passwortlänge von 22 Zeichen und dem oben beschriebenen Zeichensatz ist dennoch ein sehr hohes Sicherheitsniveau gegeben. Quelle https://www.malwaretech.com/2014/05/the-reason-for-maximum-password-lengths.html
 
+Feld `Email invite sender address`wenn ihr Einladungsmails zu den Terminen verschicken möchtet, tragt hier bitte die Absenderadresse eures dafür verwendeten Mailkontos ein. Im Test mit einem lokalen Webserver, der sehr tolerant ist, hat auch nur der ein Buchstabe gereicht um das Versenden von Mails zu aktivieren.
+
 Im nächsten Fenster belassen wir diese Einstellung so und klicken nur
 auf Save Changes:
 
@@ -331,11 +336,10 @@ anschließend rechts auf `+Add user`.
 
 <img width="700" src="./images/image46.png" />
 
-Bei der E-Mail-Adresse ist es nicht so
-wichtig, was eingegeben wird. Sie ist zwar ein Pflichtfeld, aber da wir
-am Anfang des Setups die E-Mail-Adresse leer gelassen haben, wird sie
-nicht direkt verwendet. Sie wird erst wieder beim Freigeben des
-Kalenders wichtig. Hat man jedoch eine "Email invite sender address" angegeben, bitte unbedingt eine korrekte E-Mail-Adresse angeben.
+Wenn Ihr automatische Einladungsmails zu Terminen verschicken möchtet, gebt hier bitte eure Antwort E-Mail-Adresse an bzw. die E-Mail-Adresse unter der ihr Mails empfangen möchtet. Wenn die Empfänger der Einladungsmails auf Antworten klicken, steht diese in der Antwortzeile. Als Absenderadresse der E-Mails wird diejenige Mailadresse verwendet, die ihr für die nullmailer Konfiguration verwendet habt.
+
+Nur wenn ihr ganz sicher seit keine Termineinladungen verschicken zu wollen, ist es nicht so wichtig, was eingegeben wird. Sie wird erst wieder beim Freigeben des
+Kalenders wichtig. 
 
 Hier im Beispiel legen wir einen Benutzer1 und einen
 Benutzer2 an.
@@ -352,6 +356,39 @@ Analog gehen wir für den Kalender vor und machen diese Einstellung für
 Benutzer2
 
 <img width="700" src="./images/image42.png" />
+
+### Maildienst Einrichtung (optional, nur für Einladungsmails)
+
+Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. 
+Konfiguration:
+/etc/nullmailer/adminaddr
+```
+Hier steht eure E-Mail-Adresse auf der Ihr Nachrichten vom System erhalten möchtet
+```
+
+/etc/nullmailer/adminaddr
+```
+nullhost
+```
+Hier könnt ihr ein beliebiges Wort eintragen. Diese Datei verhindert, dass euer Hostname eures Linuxsystems/Raspberry PI an den Mailemfänger im Header-Feld `Message-ID` ausgeplaudert wird
+
+/etc/nullmailer/remotes
+```
+smtp.gmail.com smtp --user=<euerNutzername> --pass=<Euer Apppasswort> --starttls
+```
+Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com dann ist `user=blablaudkdka` und `--pass` euer Apppasswort, welches ihr extra konfigurieren müsst. Da schaut bitte in die Anleitung des jeweiligen Providers für die SMPT Server- und Zugangsdaten.
+
+/etc/nullmailer/defaultdomain bleibt leer
+
+Das wars auch schon, ab jetzt könnt ihr Mails versenden. Um das auch via Kommandozeile zu testen `"Subject: sendmail test" | sendmail -v eure@zieladresse.domain` 
+Jetzt bekommt ihr eine leere Mail zugeschickt, wenn alles geklappt hat.
+
+Ich empfehle auch noch die Installation des nullmailer Rewrite Wrapper https://github.com/JsBergbau/nullmailer-Rewrite-Wrapper Anleitung ist dort beschrieben.
+Dadurch gehen Mails die nur an "pi" oder "root" addressiert sind auch an euch. Nullmailer schreibt die nur um, wenn sie an "root@localhost" usw. gerichtet sind.
+
+Weiterer Bonus durch den Nullmailer Rewrite Wrapper: Es wird auch der Absender zuverlässig überschrieben. Bei Mails via Kommadozeile steht sonst im Header euer Nutzername auf dem Raspberry-PI und der Hostname, z.B. `X-Google-Original-From: <pi@baikaltestinstallation>` 
+Auch bei den via Baikal versendeten Einladungsmails dürfte das der Fall sein.
+
 
 ## Baikal-Update
 
