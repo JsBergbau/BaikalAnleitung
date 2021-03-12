@@ -100,7 +100,7 @@ natürlich ausgenommen).
 ## Setup
 
 In diesem Beispiel nehmen wir einen Raspberry PI mit Nginx als
-Webserver. Als Basis nehmen wir das Raspian Buster Lite Image und
+Webserver. Als Basis nehmen wir ein Raspbery PI OS Lite Image und
 flashen es via Etcher auf eine SD-Karte.
 
 ### Raspberry PI vorbereiten
