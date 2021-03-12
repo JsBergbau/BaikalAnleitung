@@ -110,7 +110,7 @@ flashen es via Etcher auf eine SD-Karte.
 Wer hier weitere Unterstützung braucht, kann z.B. nach dieser Anleitung
 [https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/](https://tutorials-raspberrypi.de/rapbian-betriebssystem-raspberry-pi-image-sd-karte-flashen-windows-mac-linux/)
 vorgehen. Raspbian Buster Lite findet man auf
-[https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)
+[https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit)
 
 Nach dem Schreiben des Abbilds auf die SD-Karte, nehmen wir sie kurz aus
 dem Kartenleser und stecken sie wieder ein. Dadurch bekommen wir nun
