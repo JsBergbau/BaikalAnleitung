@@ -385,7 +385,7 @@ Hier am Beispiel für GMail. Lautet eure E-Mail-Adresse blablaudkdka@gmail.com d
 
 bleibt leer
 
-Das wars auch schon, ab jetzt könnt ihr Mails versenden. Um das auch via Kommandozeile zu testen `"Subject: sendmail test" | sendmail -v eure@zieladresse.domain` 
+Das wars auch schon, ab jetzt könnt ihr Mails versenden. Um das auch via Kommandozeile zu testen `echo "Subject: sendmail test" | sendmail -v eure@zieladresse.domain` 
 Jetzt bekommt ihr eine leere Mail zugeschickt, wenn alles geklappt hat.
 
 Ich empfehle auch noch die Installation des nullmailer Rewrite Wrapper https://github.com/JsBergbau/nullmailer-Rewrite-Wrapper Anleitung ist dort beschrieben.
