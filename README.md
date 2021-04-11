@@ -359,7 +359,7 @@ Benutzer2
 
 ### Maildienst Einrichtung (optional, nur für Einladungsmails)
 
-Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. Die Wahl fiel auf nullmailer, da dieses Paket sehr schlank ist, aber gleichzeitig eine Nachrichtenwarteschlange hat. Kann aus irgendeinem Grund die Mail aktuell nicht versendet werden, wird sie später nachgeholt.
+Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. Die Wahl fiel auf nullmailer, da dieses Paket sehr schlank ist, aber gleichzeitig eine Nachrichtenwarteschlange hat. Kann die Mail aufgrund eines temporären Fehlers, wie z.B. bei einem Netzwerkproblem bzw. Internetverbindungsproblem aktuell nicht versendet werden, wird automatisch versucht sie später erneut zu senden.
 
 
 Konfiguration:
@@ -720,7 +720,8 @@ die URL und dann klappt das auch.
 Wenn ihr eure Kontakte in Gruppen sortieren wollt, wählt hier bitte
 unbedingt „Gruppen sind Kategorien der Kontakte". Diese Option kann aber
 auch später in den Einstellungen geändert werden. Der Kontoname oben
-kann beliebig angepasst werden.
+kann zwar beliebig angepasst werden, sollte aber wie von der App vorgegeben übernommen werden, da andernfalls
+Stand April 2021 keine Einladungsmails an Kontakte verschickt werden, sie Schritt [Maildienst Einrichtung (optional, nur für Einladungsmails)](#maildienst-einrichtung-optional-nur-f%C3%BCr-einladungsmails).
 
 Im nächsten Fenster tippen wir dann auf unseren Kontonamen
 
