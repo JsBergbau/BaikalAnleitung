@@ -49,7 +49,8 @@ Bevor wir mit der Installation beginnen, hier ein paar Alternativen:
 
 - Radicale: Webinterface ist standardmäßig nur auf localhost erreichbar.
 Die Oberfläche sieht im Vergleich zu Baikal altbacken aus. Freigabe von
-Kalendern zwischen Benutzern ist nicht möglich
+Kalendern zwischen Benutzern ist nicht direkt möglich. Lediglich über Umwege durch den Administrator kann es mit Verknüpfungen im Dateisystem realisiert werden. 
+Ein automatisiertes Senden von Einladungsmails wie [unten beschrieben](#maildienst-einrichtung-optional-nur-f%C3%BCr-einladungsmails) ist nicht möglich.
 
 - DAViCal: Sehr mächtiger Funktionsumfang, auch das Freigeben von Kalendern.
 Ist aber aufwendiger, da unbedingt eine PostgreSQL-Datenbank benötigt wird.
