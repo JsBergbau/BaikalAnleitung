@@ -311,6 +311,33 @@ auf Save Changes:
 
 <img width="700" src="./images/image34.png" />
 
+#### Wenn es doch mit MySQL sein soll
+
+Sollte man es als erforderlich ansehen, doch über MySQL/MariaDB eine Datenbank aufzusetzen, so kann man folgendermaßen vorgehen. Zuerst wird die Software 
+
+```sh
+sudo apt update && sudo apt install mariadb-common mycli
+```
+
+installiert. Spezifische Anleitungen für den Zugang finden sich im Netz zuhauf. 
+
+Für Baikal muss noch eine Datenbank erstellt werden. Dazu loggt man sich bei MariaDB mit 
+
+```
+mysql -u root -p
+``` 
+ein und setzt nacheinander die folgenden Befehle ab. 
+
+```mysql
+CREATE DATABASE baikal;
+CREATE USER 'baikal'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON baikal.* TO 'baikal'@'localhost';
+FLUSH PRIVILEGES;
+```
+Natürlich wird ein Passwort gewählt, was nicht so einfach zu erraten ist.
+
+<img width="600" src="./images/image54.png" />
+
 ### Benutzereinrichtung
 
 Jetzt können wir auf „Start using Baikal" klicken oder wir rufen wieder
