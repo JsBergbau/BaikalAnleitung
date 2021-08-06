@@ -584,15 +584,19 @@ das Einrichten eines gemeinsamen Kontos für gemeinsame Kontakte.
 
 Um den Kalender zu verbinden klicken wir im Thunderbird in der
 Menüleiste auf Termine und Aufgaben 🡪 Kalender oder drücken STRG +
-Umschalt + C
+Umschalt + C. Damit dieses Menü dauerhaft erscheint, ist ein Klick oben rechts auf "Zum Kalender-Tab wechseln" erforderlich.
+Add-Ons bzw. Erweiterungen brauchen im Thunderbird nicht installiert werden.
+
+
+<img width="300" src="./images/KalenderTab.jpg" />
 
 Unter Kalender gehen wir per Rechtsklick auf Neuer Kalender, hier wählen
 wir Im Netzwerk
 
 <img width="700" src="./images/image24.png" />
 
-Im nächsten Schritt wählen wir CalDAV und geben die URL, die wir oben
-kopiert haben ohne das `export` am Ende ein.
+Im nächsten Schritt wählen wir CalDAV und geben die URL, die wir [oben
+kopiert haben](https://github.com/JsBergbau/BaikalAnleitung#benutzerlogin) ohne das `export` am Ende ein.
 
 <img width="700" src="./images/image26.png" />
 
