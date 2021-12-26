@@ -816,23 +816,29 @@ Auch wenn dieses Tutorial die Absicht hat Kontakte ohne Google zu verwalten, ver
 
 Die Google-Kontakte App versucht ab und zu einen zu nötigen, dass man seine Kontakte doch ins Google-Konto synchronisieren möchte. Hier einfach standhaft bleiben und ablehnen und natürlich auch nochmal die Nachfrage, ob man das wirklich ablehnen möchte.
 
-Nach dem Verschieben kann die Google-Kontakte App auch wieder gelöscht werden. Ich habe mich bewusst für Google-Kontakte entschieden, da die meisten anderen Kontakte-Apps entweder die benötigte Funktionalität nicht bieten oder so wenige Download-Zahlen haben, dass ich eine große Gefahr sehe, dass diese Apps die Kontakte unbemerkt an den Entwickler nach Hause senden könnten.
+Nach dem Verschieben kann die Google-Kontakte App auch wieder gelöscht werden. Ich habe mich bewusst für Google-Kontakte entschieden, da die meisten anderen Kontakte-Apps entweder die benötigte Funktionalität nicht bieten oder so wenige Download-Zahlen haben, dass ich eine große Gefahr sehe, dass diese Apps die Kontakte unbemerkt an den Entwickler nach Hause senden könnten. So schickt die App "Easy Backup - Kontakte Backup" (com.simpler.backup) standardmäßig alle Kontakte an den Hersteller, wo sie wer weiß wie lange gespeichert werden - in Deutschland und vermutlich der gesamten EU durch die DSGVO ohne Einwilligung aller Kontakte strengstens verboten.
 
-Die Installation der App erfolgt z.B. über diesen Link https://play.google.com/store/apps/details?id=com.google.android.contacts oder indem man in der Google Play App "Kontakte" eingibt. Google zeigt automatisch dann nur seine Google-App an. Wettbewerbstechnisch nicht schön, aber hier zumindest hilfreich.
+Die Installation der Kontakte App von Google erfolgt z.B. über diesen Link https://play.google.com/store/apps/details?id=com.google.android.contacts oder indem man in der Google Play App "Kontakte" eingibt. Google zeigt automatisch dann nur seine Google-App an. Wettbewerbstechnisch nicht schön, aber hier zumindest hilfreich.
 
 <img width="350" src="./images/playstore_kontakte.jpg" />
 
-In der App geht ihr links oben auf den Menüknopf
+In der App geht ihr links oben auf den Menüknopf und wählt dann Einstellungen.
 
 <img width="350" src="./images/Kontakte_Menue.jpg" />
 
-Und wählt dann „exportieren“ 
+In manchen Versionen der Kontakte-App bzw. eventuell vom Gerätehersteller abhängig, kommt ihr via Druck auf das Adressbuchsymbol rechts oben und dann "Kontakte-App-Einstellungen" zu den Einstellungen um die Kontakte exportieren zu können.
+
+<img width="350" src="./images/Kontakte_Einstellungen_Aufrufen.jpg" />
+
+In den Einstellungen wählt ihr „exportieren“ 
 
 <img width="350" src="./images/Einstellungen_Kontakte_exportieren.jpg" />
 
 Im nächsten Schritt wählt ihr die Kontakte des Kontos, welches exportiert werden soll. In diesem Fall des Google-Kontos. Die Google Kontakte App zeigt hier nur die Optionen an, in denen auch Kontakte gespeichert sind. Habt ihr Kontakte Lokal im Gerät gespeichert, taucht dann auch die Option "Gerät" auf. Aber Kontakte der SIM-Karte werden hier leider nicht angezeigt. Die könnt ihr aber wie unten gleich beschrieben auf dem selben Weg importieren wie die VCF-Datei. Wählt dort dann einfach "SIM-Karte".
 
 <img width="350" src="./images/Konto_exportieren.jpg" />
+
+Ihr könnt die Kontakte auch über "Teilen" exportieren, dann braucht ihr aber eine installierte App um die VCF-Datei im Dateisystem abzulegen, wovon ihr sie dann wieder importieren könnt, siehe unten. Da je nach Hersteller so eine App nicht vorinstalliert ist, ist dieser Weg nur kurz am Rande erwähnt.
 
 Nach Druck auf "In VCF-Datei exportieren" erscheint der Speichern Dialog eures Smartphones. Hier wählt ihr einen Ordner in dem ihr die exportieren Kontakte temporär speichern möchtet. Je nach Anzahl der Kontakte dauert das Exportieren ein paar Sekunden bis Minuten. Wenn der Vorgang abgeschlossen ist, seht ihr in der Benachrichtigungsleiste „Export von <euer gewählter Dateiname>.vcf abgeschlossen“
 
