@@ -182,9 +182,9 @@ bitte einen anderen Port, z.B. 9998 und ersetzt überall, wo ihr hier
 
 ### Webserver-Konfiguration
 
-Erstellen der Datei `baikal-nginx.site` mit diesem Inhalt:
+Erstellen der Datei `baikal-nginx.site` mit diesem Inhalt (z.B. via `nano baikal-nginx.site`):
 
-```php
+```nginx
 server {
 
     listen 9999 default_server;
