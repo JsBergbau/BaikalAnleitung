@@ -522,6 +522,11 @@ können aber auch den Link kopieren und den Rest mit `?export` entfernen,
 sodass es dann so `http://<IP>:9999/dav.php/calendars/Benutzer1/default/`
 aussieht. Diesen Link brauchen wir weiter unten.
 
+Info: Per Klick auf `default` direkt unterhalb der Überschrift "Nodes" gelangt man zu einer weiteren Seite. 
+Dort ist dann jeder einzelne Kalendereintrag im Quelltext als ICS-Datei abrufbar. Das Datum ist das Ereignisdatum des Kalendereintrags. 
+Via Klick auf den Dateinamen kann die Datei heruntergeladen werden oder via Klick auf das `i` Symbol kann der Eintrag auch direkt im Browser 
+zusammen mit weiteren Details betrachtet werden.
+
 ## Freigabe des Kalenders für andere Benutzer
 
 Bevor wir die Benutzeroberfläche verlassen, geben wir noch unseren
