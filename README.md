@@ -26,6 +26,7 @@
   - [Erfolgskontrolle](#erfolgskontrolle)
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
+- [Haltbarkeit der SD-Karte verlängern](#haltbarkeit-der-sd-karte-verlängern)
 - [Backup](#backup)
 - [Datenbank verkleinern (nur für Experten)](#datenbank-verkleinern-nur-für-experten)
 - [Weboberfläche](#weboberfläche)
@@ -941,6 +942,14 @@ Servers ein. Hier ist nun ganz wichtig Baikal mit einem SSL-Zertifikat
 zu betreiben, welches auf euren Servernamen lautet um Lauscher draußen
 zu halten.
 
+## Haltbarkeit der SD-Karte verlängern
+
+Um die Haltbarkeit der SD-Karte zu verlängern wird der TRIM-Befehl regelmäßig abgesetzt. Ich habe damit sehr gute Erfahrungen gesammelt. Die SD-Karten laufen auch noch nach Jahren ohne Probleme. Angeblich soll es SD-Karten geben, bei denen es zu Problemen und Datenverlust dadurch kommen soll. Bei mir hat es mit SD-Karten verschiedenster Hersteller (Sandisk, Transcent und Samsung) immer problemlos funktioniert. Ein Backup sollte dennoch zur Sicherheit vorher vorgenommen werden.
+
+Der Trim-Befehl wird via `sudo fstrim -v /` durchgeführt. 
+Regelmäßig kann das crontab übernehmen. Dazu `crontab -e` aufrufen. Solltet ihr nach dem Editor gefragt werden `nano` wählen. In der crontab dann
+`@daily sudo ionice fstrim -v / > /dev/null` eintragen. Damit wird einmal täglich getrimmt und die Lebensdauer der SD-Karte deutlich verlängert.
+
 ## Backup
 
 Um euren Baikal-Server zu sichern reicht es aus, das Baikal Verzeichnis
@@ -956,6 +965,12 @@ Anschließend natürlich wieder starten
 ```sh
 sudo systemctl start nginx.service
 ```
+
+Der gesamte Rasbperry-PI kann auch via restic mit der Befehlszeile 
+
+`./restic backup / /boot --exclude /var/swap --exclude .cache --exclude /var/cache --exclude /tmp --exclude _cacache --one-file-system --exclude-caches` effizient gesichert werden. Im Fall eines SD-Karten Defektes kann damit die gesamte Installation sehr einfach wiederhergestellt werden. Sollte dieses Verfahren benötigt werden, bitte unter "Issues" melden, dann gibt es dort eine angepasste Anleitung, dann erstelle ich eine angepasste Anleitung.
+
+Eine genauere Anleitung für Restic-Backup würde den Rahmen dieser Anleitung bei weitem übersteigen. Mehr Informationen gibt es unter https://github.com/restic/restic und in der Restic Dokumentation https://restic.readthedocs.io/en/latest/
 
 ## Datenbank verkleinern (nur für Experten)
 
