@@ -386,6 +386,8 @@ Benutzer2
 
 <img width="700" src="./images/image42.png" />
 
+Wichtig: Änderungen wie den Kalendernamen oder die Farbe könnt ihr nur als Admin vornehmen. Als Benutzer könnt ihr leider "Default calendar" nicht umbenennen bzw. ändern.
+
 ### Maildienst Einrichtung (optional, nur für Einladungsmails)
 
 Möchtet ihr beim Erstellen eines Termins Personen zu diesem Termin einladen und dass sie automatisch den Termin an ihre E-Mail-Adresse geschickt bekommen, benötigt ihr ein Mailsystem. Erkennbar an einer ausführbaren sendmail in eurer Pfad-Umgebung. Hierfür kann z.B. nullmailer mit `sudo apt install nullmailer` installiert werden. Die Wahl fiel auf nullmailer, da dieses Paket sehr schlank ist, aber gleichzeitig eine Nachrichtenwarteschlange hat. Kann die Mail aufgrund eines temporären Fehlers, wie z.B. bei einem Netzwerkproblem bzw. Internetverbindungsproblem aktuell nicht versendet werden, wird automatisch versucht sie später erneut zu senden.
@@ -504,7 +506,7 @@ Jetzt loggen wir uns als Benutzer über die URL ein
 `http://<IP>:9999/dav.php` ein. Wichtig, über die andere
 Oberfläche können wir uns nicht als Benutzer 1 einloggen!
 
-Einlogen muss man sich nur, wenn man Kalender mit anderen Benutzern teilen möchte. Ansonsten hat man zwei Vorteile durch den Login: Man kann alle Kalendereinträge herunterladen und man kann die Kalender-URL für Thunderbird kopieren, siehe unten.
+Einlogen muss man sich nur, wenn man Kalender mit anderen Benutzern teilen möchte. Ansonsten hat man zwei Vorteile durch den Login: Man kann alle Kalendereinträge herunterladen und man kann die Kalender-URL kopieren, siehe unten.
 
 <img width="700" src="./images/image43.png" />
 
@@ -516,12 +518,11 @@ Wir klicken auf Benutzer1
 
 <img width="700" src="./images/image45.png" />
 
-Da wir in Thunderbird/Lightning die volle URL eingeben müssen, können
-wir uns das Leben etwas erleichtern. Über den via Pfeil markierten Link
+Über den via Pfeil markierten Link
 kann man den kompletten Kalender als `.ics` Datei herunterladen. Wir
 können aber auch den Link kopieren und den Rest mit `?export` entfernen,
 sodass es dann so `http://<IP>:9999/dav.php/calendars/Benutzer1/default/`
-aussieht. Diesen Link brauchen wir weiter unten.
+aussieht. Früher war dieser Schritt notwendig um den Kalender in Thunderbird hinzuzufügen.
 
 Info: Per Klick auf `default` direkt unterhalb der Überschrift "Nodes" gelangt man zu einer weiteren Seite. 
 Dort ist dann jeder einzelne Kalendereintrag im Quelltext als ICS-Datei abrufbar. Das Datum ist das Ereignisdatum des Kalendereintrags. 
@@ -601,16 +602,14 @@ wir Im Netzwerk
 
 <img width="700" src="./images/image24.png" />
 
-Im nächsten Schritt wählen wir CalDAV und geben die URL, die wir [oben
-kopiert haben](https://github.com/JsBergbau/BaikalAnleitung#benutzerlogin) ohne das `export` am Ende ein.
+Im nächsten Schritt geben wir den Benutzernamen und die Adresse wie im Screenshot angezeigt ein, also z.B. `http://192.168.178.21:9999`. Früher musste hier eine komplizierte URL eingegeben werden, mittlerweile ist die Einrichtung in Thunderbird glücklicherweise erheblich einfacher geworden.
 
-<img width="700" src="./images/image26.png" />
+<img width="700" src="./images/ThunderbirdKalenderHinzufügen.jpg" />
 
-Im nächsten Schritt geben wir ihm noch einen Namen und eine Farbe. Die
-Farbe, die wir in Baikal gesetzt haben, wird von Thunderbird leider
-nicht übernommen.
+Im nächsten Schritt gegeben wir das Passwort von `benutzer1` ein. Es empfiehlt sich das Kennwort zu speichern, da Thunderbird leider ein paar Probleme hat, wenn man das Kennwort nicht speichert.
 
-Im nächsten Schritt geben wir nun die Benutzerdaten von Benutzer1 ein.
+Nach Bestätigung sieht man alle zur Vefügung stehenden Kalender und man kann die Eigenschaften wie die Kalenderfarbe bearbeiten oder wie oft er synchronisiert werden soll. Auch dieser Schritt hat sich erheblich verbessert. Früher wurde die vorgegebene Farbe nicht übernommen.
+
 Wir erstellen einen Termin.
 
 <img width="700" src="./images/image28.png" />
