@@ -23,6 +23,7 @@
   - [Apple](#apple)
   - [Android](#android)
     - [Übertragen der Kontakte vom vorherigen Speicherort zu DAVx<sup>5</sup>](#übertragen-der-kontakte-vom-vorherigen-speicherort-zu-davx5)
+  - [Browser](#browser)
   - [Erfolgskontrolle](#erfolgskontrolle)
 - [Zugriff von unterwegs (Fortgeschritten)](#zugriff-von-unterwegs-fortgeschritten)
   - [Exkurs: Was tun ohne öffentliche IP-Adresse](#exkurs-was-tun-ohne-öffentliche-ip-adresse)
@@ -887,6 +888,23 @@ verschwindet wieder unser Anzeigename.
 <img width="700" src="./images/image40.png" />
 
 Also mit dem Anzeigenamen lieber sparsam umgehen.
+
+### Browser
+
+Unter https://inf-it.com/open-source/clients/infcloud/ gibt es eine OpenSource Weboberfläche
+mit der sich sowohl die Kontakte als auch die Kalender im Browser bearbeiten lassen.
+Unter https://inf-it.com/infcloud/ gibt es eine Demo um einen Eindruck davon zu bekommen.
+Die Weboberfläche kann z.B. via http://192.168.178.21:9999/infcloud oder auch http://192.168.178.21:9999/web 
+eingebunden werden. 
+
+Eine ausführliche Anleitung fehlt hierzu noch, da ich die Kalender und Kontakte über Thunderbird und Android
+verwalte und gerade mit Android sehr zufrieden bin. Dort gibt es für neue Termineinträge gleich eine Autovervollständigung 
+basierend auf den vergangenen Einträgen. 
+Auf dem Desktop-PC kann man per Doppelklick auf einen Tag einen neuen Kalendereintrag erzeugen, 
+im mobilen Browser klappt das leider nicht.
+
+Auch zur Sicherheit dieser Weboberfläche kann ich nichts sagen, daher 
+empfehle ich es nur im lokalen Netz bzw. VPN zugänglich zu machen.
 
 ## Zugriff von unterwegs (Fortgeschritten)
 
