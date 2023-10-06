@@ -830,7 +830,7 @@ Die Installation der Kontakte App von Google erfolgt z.B. über diesen Link http
 
 In der App geht ihr unten auf den Schraubenschlüssel und geht dann auf "In Datei exportieren".
 
-<img width="350" src="./images/Kontakte_Okt2023.jpg" />
+<img width="350" src="./images/KontakteOkt2023.jpg" />
 
 
 Im nächsten Schritt wählt ihr die Kontakte des Kontos, welches exportiert werden soll. In diesem Fall des Google-Kontos. Die Google Kontakte App zeigt hier nur die Konten/Optionen an, in denen auch Kontakte gespeichert sind. Habt ihr Kontakte Lokal im Gerät gespeichert, taucht dann auch die Option "Gerät" auf. Aber Kontakte der SIM-Karte werden hier leider nicht angezeigt. 
@@ -847,7 +847,7 @@ Jetzt geht ihr wieder auf die Startseite der Google-Kontakte App wie oben beschr
 
 Hier wählt ihr nun euer DAVx<sup>5</sup>-Konto.
 
-Früher war es so, dass hier euer DAVx<sup>5</sup>-Konto doppelt angezeigt wurde. Da dies wieder auftreten könnte, wurde dieser Abschnitt beibehalten. Einmal als DAVx<sup>5</sup> und einmal als DAVx<sup>5</sup>-Adressbuch. Bei ersterem Konto handelt es sich um einen Bug in der Google-Kontakte-App. *_Verwendet auf gar keinen Fall dieses Konto_*, denn hier werden die Kontakte nicht synchronisiert. *_Verwendet immer den Eintrag mit DAVx<sup>5</sup>-Adressbuch_*. Siehe auch https://www.davx5.com/faq/contacts/android-11-google-contacts 
+Früher war es so, dass hier euer DAVx<sup>5</sup>-Konto doppelt angezeigt wurde. Da dies wieder auftreten könnte, wurde dieser Absatz beibehalten. Einmal als DAVx<sup>5</sup> und einmal als DAVx<sup>5</sup>-Adressbuch. Bei ersterem Konto handelt es sich um einen Bug in der Google-Kontakte-App. *_Verwendet auf gar keinen Fall dieses Konto_*, denn hier werden die Kontakte nicht synchronisiert. *_Verwendet immer den Eintrag mit DAVx<sup>5</sup>-Adressbuch_*. Siehe auch https://www.davx5.com/faq/contacts/android-11-google-contacts 
 
 Im nächsten Schritt wählt ihr die gerade gespeicherte "contacts.vcf" Datei und das war es auch schon. Jetzt werden die Kontakte importiert.
 
