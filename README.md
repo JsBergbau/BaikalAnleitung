@@ -828,35 +828,30 @@ Die Installation der Kontakte App von Google erfolgt z.B. über diesen Link http
 
 <img width="350" src="./images/playstore_kontakte.jpg" />
 
-In der App geht ihr links oben auf den Menüknopf und wählt dann Einstellungen.
+In der App geht ihr unten auf den Schraubenschlüssel und geht dann auf "In Datei exportieren".
 
-<img width="350" src="./images/Kontakte_Menue.jpg" />
+<img width="350" src="./images/Kontakte_Okt2023.jpg" />
 
-In manchen Versionen der Kontakte-App bzw. eventuell vom Gerätehersteller abhängig, kommt ihr via Druck auf das Adressbuchsymbol rechts oben und dann "Kontakte-App-Einstellungen" zu den Einstellungen um die Kontakte exportieren zu können.
 
-<img width="350" src="./images/Kontakte_Einstellungen_Aufrufen.jpg" />
+Im nächsten Schritt wählt ihr die Kontakte des Kontos, welches exportiert werden soll. In diesem Fall des Google-Kontos. Die Google Kontakte App zeigt hier nur die Konten/Optionen an, in denen auch Kontakte gespeichert sind. Habt ihr Kontakte Lokal im Gerät gespeichert, taucht dann auch die Option "Gerät" auf. Aber Kontakte der SIM-Karte werden hier leider nicht angezeigt. 
 
-In den Einstellungen wählt ihr „exportieren“ 
+Auf die SIM-Kontakte könnt ihr zugreifen, indem ihr auf "SIM-Karte" verwalten geht. Dort könnt ihr die SIM-Kontakte direkt ins DAVx<sup>5</sup>-Konto kopieren.
 
-<img width="350" src="./images/Einstellungen_Kontakte_exportieren.jpg" />
+<img width="350" src="./images/Konto_exportierenOkt2023.jpg" />
 
-Im nächsten Schritt wählt ihr die Kontakte des Kontos, welches exportiert werden soll. In diesem Fall des Google-Kontos. Die Google Kontakte App zeigt hier nur die Optionen an, in denen auch Kontakte gespeichert sind. Habt ihr Kontakte Lokal im Gerät gespeichert, taucht dann auch die Option "Gerät" auf. Aber Kontakte der SIM-Karte werden hier leider nicht angezeigt. Die könnt ihr aber wie unten gleich beschrieben auf dem selben Weg importieren wie die VCF-Datei. Wählt dort dann einfach "SIM-Karte".
+Nach Druck auf "Exportieren" erscheint der Speichern Dialog eures Smartphones. Hier wählt ihr einen Ordner in dem ihr die exportieren Kontakte temporär speichern möchtet. Je nach Anzahl der Kontakte dauert das Exportieren ein paar Sekunden bis Minuten. Wenn der Vorgang abgeschlossen ist, seht ihr in der Benachrichtigungsleiste „Export von <euer gewählter Dateiname>.vcf abgeschlossen“
 
-<img width="350" src="./images/Konto_exportieren.jpg" />
+Jetzt geht ihr wieder auf die Startseite der Google-Kontakte App wie oben beschrieben und wählt statt „Aus Datei Exportieren“ nun „Aus Datei Importieren“. 
 
-Ihr könnt die Kontakte auch über "Teilen" exportieren, dann braucht ihr aber eine installierte App um die VCF-Datei im Dateisystem abzulegen, wovon ihr sie dann wieder importieren könnt, siehe unten. Da je nach Hersteller so eine App nicht vorinstalliert ist, ist dieser Weg nur kurz am Rande erwähnt.
+<img width="350" src="./images/Kontakte_ImportierenOkt2023.jpg" />
 
-Nach Druck auf "In VCF-Datei exportieren" erscheint der Speichern Dialog eures Smartphones. Hier wählt ihr einen Ordner in dem ihr die exportieren Kontakte temporär speichern möchtet. Je nach Anzahl der Kontakte dauert das Exportieren ein paar Sekunden bis Minuten. Wenn der Vorgang abgeschlossen ist, seht ihr in der Benachrichtigungsleiste „Export von <euer gewählter Dateiname>.vcf abgeschlossen“
+Hier wählt ihr nun euer DAVx<sup>5</sup>-Konto.
 
-Jetzt geht ihr wieder ins Einstellungs-Menü der Google-Kontakte App wie oben beschrieben und wählt statt „Exportieren“ nun „Importieren“ und im nächsten Schritt "VCF-Datei". 
-
-<img width="350" src="./images/Kontakte_Importieren.jpg" />
-
-Jetzt im nächsten Schritt scheint es, dass euer DAVx<sup>5</sup> doppelt angezeigt wird. Einmal als DAVx<sup>5</sup> und einmal als DAVx<sup>5</sup>-Adressbuch. Bei ersterem Konto handelt es sich um einen Bug in der Google-Kontakte-App. *_Verwendet auf gar keinen Fall dieses Konto_*, denn hier werden die Kontakte nicht synchronisiert. *_Verwendet immer den Eintrag mit DAVx<sup>5</sup>-Adressbuch_*. Siehe auch https://www.davx5.com/faq/contacts/android-11-google-contacts 
+Früher war es so, dass hier euer DAVx<sup>5</sup>-Konto doppelt angezeigt wurde. Da dies wieder auftreten könnte, wurde dieser Abschnitt beibehalten. Einmal als DAVx<sup>5</sup> und einmal als DAVx<sup>5</sup>-Adressbuch. Bei ersterem Konto handelt es sich um einen Bug in der Google-Kontakte-App. *_Verwendet auf gar keinen Fall dieses Konto_*, denn hier werden die Kontakte nicht synchronisiert. *_Verwendet immer den Eintrag mit DAVx<sup>5</sup>-Adressbuch_*. Siehe auch https://www.davx5.com/faq/contacts/android-11-google-contacts 
 
 Im nächsten Schritt wählt ihr die gerade gespeicherte "contacts.vcf" Datei und das war es auch schon. Jetzt werden die Kontakte importiert.
 
-Leitet sicherheitshalber einen Synchronisationsvorgang in DAVx<sup>5</sup> wie weiter oben beschrieben ein. Es ist normal, dass dieser Synchronisationsvorgang je nach Anzahl der Kontakte ein paar Minuten dauern kann. Die nachfolgenden Synchronisationen sind in wenigen Sekunden abgeschlossen.
+Um sicherzugehen, dass die Kontakte alle nach Baikal übertragen werden/wurden, leitet einen Synchronisationsvorgang in DAVx<sup>5</sup> wie weiter oben beschrieben ein. Es ist normal, dass dieser Synchronisationsvorgang je nach Anzahl der Kontakte ein paar Minuten dauern kann. Die nachfolgenden Synchronisationen sind in wenigen Sekunden abgeschlossen.
 
 Anschließend können die Kontakte im alten Konto gelöscht werden. Die Übertragung nach DAVx<sup>5</sup> ist nun abgeschlossen.
 
