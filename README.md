@@ -266,6 +266,9 @@ sudo chown -R www-data:www-data . #Man beachte den Punkt „."
 
 sudo chown root:root baikal-nginx.site # Dient der Sicherheit. Damit der Webserver nicht das eigene Verzeichnis umschreiben kann
 
+#Ab Debian 12 (Bookworm) fehlt den Homeverzeichnissen das executable Bit, damit kann nginx nicht auf das Homeverzeichnis zugreifen. Mit folgendem Kommando wird dies wieder wie in früheren Versionen hergestellt
+sudo chmod o+x /home/pi
+
 sudo ln -s /home/pi/DiensteUndProgramme/Baikal/baikal-nginx.site /etc/nginx/sites-enabled/baikal-nginx.site #Unsere Datei in den Webserver verlinken, sodass die Seite ausgeliefert wird
 
 # Neustarten des Webservers
