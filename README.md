@@ -37,6 +37,9 @@
   - [Netzteil](#netzteil)
  - [Creative Commons Lizenz](#creative-commons-lizenz)
 
+# [Leistungssteigerung von Heizkörpern](https://github.com/JsBergbau/HeizkoerperLeistungssteigerung)
+Da Google bisher seit über 3 Jahren mein Repository zur Steigerung der Leistung von Heizkörpern noch nicht indexiert hat, erfolgt hier eine Verlinkung. Gerade für die kalte Jahreszeit kann das sehr hilfreich sein, um nicht frieren zu müssen. Hier gehts zur [Leistungssteigerung von Heizkörpern](https://github.com/JsBergbau/HeizkoerperLeistungssteigerung) mit einfachen Lüftern um je nach Situation Energie zu sparen oder zumindest nicht zu frieren https://github.com/JsBergbau/HeizkoerperLeistungssteigerung
+
 ## Einleitung
 
 In diesem Tutorial geht es darum mit Baikal einen eigenen Kalender- und
