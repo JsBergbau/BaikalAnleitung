@@ -40,6 +40,10 @@
 # [Leistungssteigerung von Heizkörpern](https://github.com/JsBergbau/HeizkoerperLeistungssteigerung)
 Da Google bisher seit über 3 Jahren mein Repository zur Steigerung der Leistung von Heizkörpern noch nicht indexiert hat, erfolgt hier eine Verlinkung. Gerade für die kalte Jahreszeit kann das sehr hilfreich sein, um nicht frieren zu müssen. Hier gehts zur [Leistungssteigerung von Heizkörpern](https://github.com/JsBergbau/HeizkoerperLeistungssteigerung) mit einfachen Lüftern um je nach Situation Energie zu sparen oder zumindest nicht zu frieren https://github.com/JsBergbau/HeizkoerperLeistungssteigerung
 
+# [Kostal KSEM Emulator](https://github.com/JsBergbau/Kostal-KSEM-Emulator)
+Damit Google den Ksem-Emulator für Kostalwechselrichter schneller indiziert, erfolgt hier eine Verlinkung. Mit diesem Emulator kann ein Kostal Smart Energy Meter emuliert werden und zum Beispiel mit den Daten eines Shellys gefüttert werden. Das kann sehr vorteilhaft sein, wenn man bereits einen Shelly hat und man sich das Geld sparen möchte und oder keinen Platz dafür im Zählerschrank hat.
+Hier https://github.com/JsBergbau/Kostal-KSEM-Emulator geht es direkt zum Emulator mit vielen wichtigen Informationen.
+
 ## Einleitung
 
 In diesem Tutorial geht es darum mit Baikal einen eigenen Kalender- und
