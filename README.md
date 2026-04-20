@@ -191,7 +191,7 @@ bitte einen anderen Port, z.B. 9998 und ersetzt überall, wo ihr hier
 
 ### Webserver-Konfiguration
 
-Erstellen der Datei `baikal-nginx.site` mit diesem Inhalt (z.B. via `nano baikal-nginx.site`):
+Erstellen der Datei `baikal-nginx.site` mit diesem Inhalt (z.B. via `nano baikal-nginx.site`) (direkt im Baikal Verzeichnis /home/pi/Baikal/):
 
 ```nginx
 server {
@@ -244,6 +244,7 @@ server {
         fastcgi_split_path_info ^(.+.php)(.*)$;
         fastcgi_pass unix:/run/php/php7.3-fpm.sock; #Hier auf eure installierte PHP-Version achten. 
 	#fastcgi_pass unix:/run/php/php7.4-fpm.sock; #Ubuntu hat z.B. schon php 7.4
+	#fastcgi_pass unix:/run/php/php7.2-fpm.sock; #Debian 12 (Stand 11/2024) z.B. schon php 8.2
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param PATH_INFO $fastcgi_path_info;
     }
@@ -263,6 +264,8 @@ Gegebenenfalls bitte den Pfad in root `/home/pi/Baikal/html;` und den Port
 in `listen 9999 default_server;` anpassen. Bei der Zeile `fastcgi_pass unix:/run/php/php7.3-fpm.sock;` bitte durch ausführen von `php --version` überprüfen, ob ihr auch php 7.3.x habt (Stand Januar 2021 ist das beim Raspberry PI der Fall). 
 
 Ubuntu bringt teilweise 7.4.x mit und daher die Zeile mit Version 7.3 auskommentieren, sowie bei der Zeile darunter das Kommentarzeichen `#` entfernen. Habt ihr hier die falsche Version stehen, kann das die Ursache für eine 502 Bad Gateway Fehlermeldung sein.
+
+Gleiches gilt bei Verwendung von Debian 12 Bookworm. Stand 11/2024 wird hier die PHP version 8.2 verwendet.
 
 Zum Schluss noch ein paar kleine Abschlussarbeiten:
 
@@ -327,8 +330,15 @@ auf Save Changes:
 
 Sollte man es als erforderlich ansehen, doch über MySQL/MariaDB eine Datenbank aufzusetzen, so kann man folgendermaßen vorgehen. Zuerst wird die Software 
 
-```sh
+```
 sudo apt update && sudo apt install mariadb-common mycli
+```
+
+Anstelle dem oben genannten gilt das hier für Debian 12 Bookworm mit MariaDB (ich verzichte auf apt-get update && weil das System in den letzten Minuten schon X mal auf updates geprüft wurde, wenn mans später auf MariaDB umstellt vorher noch ein apt-get update ausführen)
+
+```
+sudo apt-get install mariadb-server php8.2-mysql -y
+sudo mysql_secure_installation
 ```
 
 installiert. Spezifische Anleitungen für den Zugang finden sich im Netz zuhauf. 
@@ -337,7 +347,14 @@ Für Baikal muss noch eine Datenbank erstellt werden. Dazu loggt man sich bei Ma
 
 ```
 mysql -u root -p
-``` 
+```
+
+Und hier verwendet man anstelle dem Befehl oben für Debian 12 mit MariaDB ein
+
+```
+sudo mariadb
+```
+
 ein und setzt nacheinander die folgenden Befehle ab. 
 
 ```mysql
